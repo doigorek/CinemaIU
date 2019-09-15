@@ -4,12 +4,59 @@
 
     </head>
     <body>
+            <form style="width: 400px" >
+                <div>
+                        <input type="text" name="client_name" value="" placeholder="Введите ваше имя" > 
+                        <select>
+                            <option value=""> Выбор 1 </option>
+                            <option value=""> Выбор 2 </option>
+                            <option value=""> Выбор 3 </option>
+                            <option value=""> Выбор 4 </option>
+                        </select>
+                </div>
+
+                <div>
+                    <input name="client_surname" placeholder="Введите вашу фамилию" > 
+                </div>
+                     
+                <div>
+                    <label for="first">1</label>
+                    <input id="first" type="radio" value="1" name="some">
+                    <label for="second">2</label>
+                    <input id="second" type="radio" value="2" name="some">
+                    <input type="radio" value="3" name="some">
+                    <input type="radio" value="4" name="some">
+                </div>
+                    
+                <div>
+                        <textarea name="" id="" cols="30" rows="10" >
+                                Коментарий
+                            </textarea>
+                </div>   
+                    
+                <div>
+                    <input id="agree" type="checkbox">
+                    <label for="agree" >
+                        Я согласен на обработку персональных данных
+                    </label>
+                </div>
+                    
+                <div>
+                    <input type="submit">
+                    <button type="button">
+                            Не отправить
+                    </button>
+                    <button type="submit">Отправить</button>
+                </div>    
+                </form>
+
+            <br>
 
             <header style="background : grey">
                 <a target="_blank" href="https://university.innopolis.ru/">
                     <img src="img/logo.png" alt="Университет Иннополис" title="Университет Иннополис">
                 </a>
-                        </br>
+                        </<br>
                         <a href="#">Кинотеатр CinemaIU</a>
                         <a href="#">Афиша</a>
                         <a href="#">Купить билеты онлайн</a>
@@ -23,7 +70,7 @@
             </header>
 
             <div>
-            <img width="400" src="img/top_bg.jpg" alt="Первый кинотеатр в Иннополис" title="Первый кинотеатр в Иннополис">
+            <img width="400" src="./img/top_bg.jpg" alt="Первый кинотеатр в Иннополис" title="Первый кинотеатр в Иннополис">
             </div>
 
             <div style= "border: 5px solid yellow; height: 50px;" >
@@ -115,7 +162,11 @@
         </div> 
         <footer>
             <div>
-                <img width="10" src="https://via.placeholder.com/1920x450?text=Map-1920x450" alt="Здесь будет карта" title="Здесь будет карта">
+                <iframe src="https://www.google.com/maps/place/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%98%D0%BD%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/@55.7511088,48.7448656,15.08z/data=!4m13!1m7!3m6!1s0x415bfe66bb4bc99d:0xf23e00d5cde79014!2z0JjQvdC90L7Qv9C-0LvQuNGBLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!3b1!8m2!3d55.7517163!4d48.7473099!3m4!1s0x415ead10e59136d3:0x4b2878a0acaeb103!8m2!3d55.7534494!4d48.7434116" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </iframe>
+            </div>
+            <div>
+                <img width="1100" src="https://via.placeholder.com/1920x450?text=Map-1920x450" alt="Здесь будет карта" title="Здесь будет карта">
             </div>
             <div>
                 <a href="http://fb.com" title="facebook" target="_blank">
@@ -132,5 +183,4 @@
                 </a>
             </div>
         </footer> 
-    </body>
-</html>
+        </html>
