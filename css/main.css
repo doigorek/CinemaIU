@@ -14,49 +14,90 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-/*ссылки цвет*/
-a{
+/***Ссылки***/
+a {
     color: white;
+}
+/* зеленый пр наведении шапка */
+ul a:hover{
+    color: #a3cc40;
+}
+/*черный при наведении остальное*/
+a:hover{
+    color: #252525;
 }
 /*Откл. подчеркивание*/
 .text_normal{
     text-decoration: none;
 }
-.background_top{
-    background-image: url(../img/top_bg.jpg)
+
+
+/*** I***/
+/*Шапка*/
+.flex1{
+    display: -webkit-inline-flex;
+    align-items: center;
+    margin-top: 54px;
+    margin-left: 170px;
+} 
+.flex1 ul{
+    list-style: none;
+    text-align: right
 }
+.flex1 li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.background_top{
+    background-image: url(../img/top_bg.jpg);
+    height: 769px;
+    width: auto;
+} 
+
+
 /*Для основного текста на сайте*/
 .simpletext{
     font-size: 14px;
-    font-weight: 100; /*не работает*/
+    font-weight: 100;
 }
 @font-face{
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
 }
-
+/*III. Почему мы?*/
+.iii{
+    padding-left: 170px;
+    padding-right: 170px;
+}
+.block_why{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+/*IV. Таблица фильмов*/
 .movie-list{
-padding: 110px 0;
+    max-width: 1030px;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
 }
-
+h2 {
+    font-size: 50px;
+    color: #252525;
+    font-weight: 700;
+}
 .movie-list__header{
-        font-size: 50px;
-        color: #252525;
-        font-weight: 700;
-        margin: 0 0 76px;
-        text-align: center;
+    margin: 0 0 76px;
+    text-align: center;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .movie-list__table{
     width: 1030px;
-    height: 375px;
     border-collapse: collapse;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     overflow: hidden;
 }
 .movie-list__table th{
@@ -67,58 +108,38 @@ padding: 110px 0;
     padding: 21px 0;
     text-align: left;
 }
-/*псевдокласс*//*
-tr :nth-child(1){
-    font-size: 22px;
-    font-weight: 100;
-    color: #fff;
-    background: #373737;
-    padding: 19px 0;
-    margin: 0 0 21px; 
+.movie-list__table th:first-child{
+    text-align: center;
 }
-tr :nth-child(2){
-    font-size: 22px;
-    font-weight: 100;
-    color: #fff;
-    background: #4b4d4f;
-    padding: 19px 0;
-    margin: 0 0 21px;  
-}
-tr :nth-child(3){
-    font-size: 22px;
-    font-weight: 100;
-    color: #fff;
-    background: #6d6d6d;
-    padding: 19px 0;
-    margin: 0 0 21px;  
-}
-*/
-
-.movie-list__table__tr1{
-    font-size: 22px;
-    font-weight: 100;
-    color: #fff;
-    background: #373737;
-    padding: 19px 0;
-    margin: 0 0 21px;
-}
-.movie-list__table__tr2{
-    font-size: 22px;
-    font-weight: 100;
-    color: #fff;
-    background: #4b4d4f;
-    padding: 19px 0;
-    margin: 0 0 21px;
-}
-
 .first_colomn  td:first-child{
     text-align: center;
 }
-
-/*Тут нужно сделать приоритет классу*/
-.text-center th:first-child{
-    
-    text-align: center;
+tr {
+    font-size: 22px;
+    font-weight: 100;
+    color: #fff;
+    margin: 21px 21px;
+}
+tr:nth-child(3n+1){
+    background: #373737;
+}
+tr:nth-child(3n+2){
+    background: #4b4d4f; 
+}
+tr:nth-child(3n+3){
+    background: #797979;
+}
+.last_line tr:last-child{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+.movie-list__table__undertable tr{
+    font-size: 14px;
+    font-weight: 100;
+    color: gray;
+    background: white;
+    padding-top: 40px;
 }
 /*ширина колонок*/
 .widthcolomn {
@@ -127,16 +148,26 @@ tr :nth-child(3){
 .widthcolomn__firstcolomn{
     width: 180px;
 }
-/*хзчтоэт*/
+/*описание таблицы*/
 .disclaimer {
     margin: 30px auto 0;
     max-width: 830px;
     padding: 0px 0 0px; /*90px 0 60px;*/
 }
-
-.inlineblock{
-    display: inline-block;
+/*Получить подарок*/
+.background2{
+    background: url(../img/b4_bg.jpg);
+    height: 700px;
 }
-
-
+.movies_flex{
+padding-left: 200px;
+padding-right: 200px;
+}
+.movies_flex h2{
+    padding-top: 90px; 
+}
+.movies_flex p{
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
   
