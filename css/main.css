@@ -20,7 +20,7 @@ a {
 }
 /* зеленый пр наведении шапка */
 ul a:hover{
-    color: #a3cc40;
+    color: #90d23d;
 }
 /*черный при наведении остальное*/
 a:hover{
@@ -114,11 +114,11 @@ h2 {
 .first_colomn  td:first-child{
     text-align: center;
 }
-tr {
+.movie-list__table td {
     font-size: 22px;
     font-weight: 100;
     color: #fff;
-    margin: 21px 21px;
+    padding: 19px 0;
 }
 tr:nth-child(3n+1){
     background: #373737;
@@ -127,19 +127,22 @@ tr:nth-child(3n+2){
     background: #4b4d4f; 
 }
 tr:nth-child(3n+3){
-    background: #797979;
+    background: #6c6c6c;
 }
 .last_line tr:last-child{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    overflow: hidden;
 }
-.movie-list__table__undertable tr{
+.movie-list__table__undertable{
+    width: 830px;
+}
+.movie-list__table__undertable td{
     font-size: 14px;
     font-weight: 100;
     color: gray;
     background: white;
     padding-top: 40px;
+    
 }
 /*ширина колонок*/
 .widthcolomn {
