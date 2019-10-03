@@ -37,7 +37,24 @@ a:hover{
 .text-normal{
     text-decoration: none;
 }
+h2 
+{
+    font-family: 'Roboto';
+    font-size: 50px;
+    text-align: center;  
+    text-align: center;
+    font-weight: 500;
+}
+h3 {
+    font-size: 35px;
+    font-family: "Roboto";
+    color: rgb(36, 36, 36);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 900;
+}
 
+  
 
 /*** I***/
 /***Шапка***/
@@ -47,6 +64,7 @@ a:hover{
     justify-content: space-around;
     align-items: center;
     padding-top: 54px;
+    flex-wrap: wrap;
     
 } 
 .flex1 ul{
@@ -55,6 +73,7 @@ a:hover{
 .flex1 li {
     display: inline-block;
     padding-right: 40px;
+    color: #fff;
 }
 /*Для основного текста на сайте*/
 .simple-text{
@@ -64,8 +83,7 @@ a:hover{
 }
 /**h1**/
 .main{
-    margin-top: 175px;
-    
+    margin-top: 175px;   
 }
 h1{
     line-height: 1;
@@ -104,23 +122,70 @@ h1{
 @font-face {
     font-family: 'Roboto-Thin';
     src: url('../fonts/Roboto-Thin.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 100;
 }
 @font-face {
     font-family: 'Roboto-Regular';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 100; 
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Black.ttf) format('truetype');
+}
+/*II. Добро пожаловать*/
+.welcome{
+    width: 515px; 
+    padding: 40px 30px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+    position: absolute;
+    top: 635px;
+    left: 685px;
+}
+.welcome h3{
+    text-align: left;
+    padding-bottom: 28px; 
+    font-size: 39px;  
+}
+.welcome_text-block {
+    padding-bottom: 8px;
+}
+
 /*III. Почему мы?*/
-.iii{
-    padding-left: 170px;
-    padding-right: 170px;
+.width-content{
+    max-width: 1030px;
+    margin: auto;
+    overflow: hidden;
 }
-.block_why{
-    display: inline-block;
-    width: 30%;
+.width-content h2
+{
+    margin-bottom: 117px;
+    text-align: left;
+}
+.img-warp{
+    height: 211px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.img-warp img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sections{
+    float: left;
+    text-align: left;
+    width: 33%;
     vertical-align: top;
 }
+.sections p{
+    text-align: center;
+}
+
 /*IV. Таблица фильмов*/
 .movie-list{
     max-width: 1030px;
@@ -128,12 +193,6 @@ h1{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 150px;
-}
-h2 {
-    font-family: 'Roboto-Regular';
-    font-size: 50px;
-    color: #252525;
-    font-weight: 700;
 }
 .movie-list__header{
     margin: 0 0 76px;
