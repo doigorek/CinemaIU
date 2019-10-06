@@ -1,0 +1,284 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address,big, cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, button
+h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
+{
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/**Подключаем шрифты**/
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(../fonts/Roboto-Black.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf) format('truetype');
+}
+/***Шапка***/
+.background-top{
+    background-size: cover;
+    background-image: url(../img/background_top.png);
+    height:843px;
+    width: auto; 
+}
+.header-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 54px;
+    flex-wrap: wrap;
+}
+.header-flex li {
+    font-family: 'Roboto-Thin';
+    display: inline-block;
+    padding-right: 40px;
+}
+.header-flex a{
+    color: #fff;
+}
+.header-flex a:hover{
+    color: #90d23d;
+}
+.main{
+    font-family: 'Roboto-Thin';
+    text-align: center;
+    color: #fff;
+    margin-top: 160px;
+    padding-bottom: 363px;
+}
+.main-h1{
+    font-size: 93.49px;
+    font-weight: 100;
+    line-height: 0.9;
+    -moz-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
+    -webkit-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
+    -ms-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
+}
+.main-h2{
+    font-family: 'Roboto-Regular';
+    font-size: 58.431px;
+    line-height: 1.2;
+    -moz-transform: matrix( 0.85,0,0,0.85,0,0);
+    -webkit-transform: matrix( 0.85,0,0,0.85,0,0);
+    -ms-transform: matrix( 0.85,0,0,0.85,0,0);
+}
+/***Почему мы***/
+.why-we{
+    max-width: 1030px;
+    margin: auto;
+    overflow: hidden;
+}
+.why-we-h2{
+    font-family: 'Roboto-Black';
+    font-size: 50px;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 120px; 
+}
+/**section**/
+.why-we-section{
+    display: flex; 
+ } 
+.why-we-section section{
+    text-align: center;
+    margin: 0 22px;
+}
+/*картинки*/
+.img-warp{
+    height: 211px;
+    position: relative;
+    margin-bottom: 36px;
+}  
+.img-warp img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.section{
+    margin-left: 37,5px;
+}
+.section h3{
+    font-size: 35px;
+    font-family: 'Roboto-Black';
+    color: rgb(36, 36, 36);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+section p{
+    font-size: 14px;
+    font-family: 'Roboto-Thin';
+    }
+/**Welcome**/ 
+.welcome{
+    font-size: 14px;
+    font-weight: 100; 
+    width: 515px; 
+    padding: 34px 60px 42px 30px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+    position: absolute;
+    top: 640px;
+    left: 762px;
+    z-index: 145;
+}
+.welcome h3{
+    font-family: 'Roboto-Black';
+    text-align: left;
+    padding-bottom: 28px; 
+    font-size: 39px;  
+}
+.welcome_text-block {
+    font-family: 'Roboto-Thin';
+    padding-bottom: 16px;
+}
+/**Таблица фильмов**/
+.movie-list{
+    max-width: 1030px;
+    margin: auto;
+    overflow: hidden;
+}
+.movie-list a{
+    color: #fff;
+}
+.movie-list_h2{
+    font-family: 'Roboto-Black';
+    font-size: 50px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 117px; 
+    margin-bottom: 77px;
+    color: #000000; 
+}
+.movie-list_table{
+    font-family:'Roboto-Regular';
+    width: 1030px;
+    border-collapse: collapse;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    color: #fff;
+}
+.movie-list_table__header th{
+    font-family: 'Roboto-Bold';
+    font-weight: 100;
+    font-size: 30px;
+    background: #a3cc40;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    text-align: left;
+}
+
+.movie-list_table__body td{
+    font-size: 22px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    text-align: left;
+}
+/*первая колонна*/
+.movie-list_table__header th:first-of-type{
+    text-align: center;
+}
+.movie-list_table__body td:first-of-type{
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+/*'+'*/
+.movie-list_table__body td:last-of-type{
+    padding-left: 61px;
+    padding-right: 32px;
+    padding-top: 19px;
+}
+.movie-list_table__body tr:nth-child(3n+1){
+    background: #373737;
+}
+.movie-list_table__body tr:nth-child(3n+2){
+    background: #4b4d4f;
+}
+.movie-list_table__body tr:nth-child(3n+3){
+    background: #6c6c6c;
+}
+/*закругление последней строки*/
+.last-line tr:last-child td:nth-child(1){
+    border-bottom-left-radius: 15px;
+}
+.last-line tr:last-child td:nth-child(4){
+    border-bottom-right-radius: 15px;
+}
+/*описание таблицы*/
+.movie-list__table__undertable td{
+    color: #000000;
+    font-size: 14px;
+    padding-top: 39px;
+    padding-bottom: 146px;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Roboto-Thin';
+} 
+/***Подарок каждому***/
+.present-background{
+    background-size: cover;
+    background: url(../img/background_two.png);
+    width: auto;
+    min-height: 700px;
+}
+.present-img{
+    position: absolute;
+}
+.present-block{
+    max-width: 1030px;
+    margin: auto;
+    overflow: hidden;
+    text-align: right;
+}
+.present-block-h3{
+    margin-top: 140px;
+    margin-bottom: 50px;
+    font-family: 'Roboto-Black';
+    font-size: 50px;
+    color: #fff;
+}
+.present-block p{
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 19px;
+    padding-left: 360px;
+} 
+.present-block_button{  
+    font-family: 'Roboto-Thin';  
+    text-align: center;
+    background: #a3cc40;
+    border-radius: 15px;
+    margin-top: 31px;
+    padding: 16px 20px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: 3px;
+    overflow: hidden;
+    }
+.present-block_button a{
+    color: #fff;
+    font-size: 20px;
+}

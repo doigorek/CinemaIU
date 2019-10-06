@@ -12,12 +12,12 @@ font-size: 15px;
     vertical-align: bottom; 
   }
 .icon-down{
-        width: 15px;
-        height: 17px;
-        border: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-top: 11px solid white;
-        display: inline-block; 
-        vertical-align: bottom;     
+    width: 15px;
+    height: 17px;
+    border: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid white;
+    display: inline-block; 
+    vertical-align: bottom;     
   }
