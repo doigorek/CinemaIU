@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/icons.css">
+    <script src="css.jquery.min.js"></script>
+    <script src="css/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -317,9 +320,12 @@
             </div>
 
             <div>
-                <input name="client_surname" placeholder="Введите вашу фамилию" > 
+                <input required name="client_surname" placeholder="Введите вашу фамилию" > 
             </div>
-                 
+            <div>
+                <input type="email"/>
+                <input type="password"/>
+            </div>     
             <div>
                 <label for="first">1</label>
                 <input id="first" type="radio" value="1" name="some">
@@ -350,5 +356,9 @@
                 <button type="submit">Отправить</button>
             </div>    
         </form>
-</body>
+
+
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+    </body>
 </html>

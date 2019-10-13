@@ -17,7 +17,7 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
 @font-face {
     font-family: 'Roboto-Thin';
     src: url('../fonts/Roboto-Thin.ttf') format('truetype');
-    font-weight: 900;
+
 }
 @font-face {
     font-family: 'Roboto-Regular';
@@ -33,8 +33,9 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
 }
 /***Шапка***/
 .background-top{
-    background-size: cover;
+    
     background-image: url(../img/background_top.png);
+    background-size: cover;
     height:843px;
     width: auto; 
 }
@@ -239,11 +240,12 @@ section p{
 } 
 /***Подарок каждому***/
 .present-background{
+    background-image: url(../img/background_two.png);
     background-size: cover;
-    background: url(../img/background_two.png);
     width: auto;
     min-height: 700px;
 }
+/****Доделай!****/
 .present-img{
     position: absolute;
 }
@@ -281,4 +283,34 @@ section p{
 .present-block_button a{
     color: #fff;
     font-size: 20px;
+}
+/***Сетка фильмов***/
+.movie-grid{
+    max-width: 1030px;
+    
+    margin: auto;
+    overflow: hidden;
+}
+.movie-grid_header{
+    margin-left: 25px;
+    margin-top: 86px; 
+}
+.movie-grid_header h2{
+    font-family: 'Roboto-Black';
+    font-size: 50px;
+    text-align: left;
+    font-weight: 500;
+    color: #000000;  
+}
+.movie-grid_header p{
+    margin-top: 35px;
+    margin-bottom: 79px;  
+}
+.movie-grid_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+}
+.movie-grid_flex-element{
+  
 }
