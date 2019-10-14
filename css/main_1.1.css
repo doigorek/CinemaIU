@@ -33,23 +33,29 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
 }
 /***Шапка***/
 .background-top{
-    
-    background-image: url(../img/background_top.png);
+    padding-top: 51px;
+    padding-bottom: 354px;
+    background-image: url(../img/background_top.jpg);
     background-size: cover;
     height:843px;
     width: auto; 
 }
+.header-logo{
+    flex: 1; /* можно ли оставить вместо inline-block, если соответствует требуемым функциям?*/
+}
 .header-flex{
+    width: 1030px;
+    margin: auto;
+    margin-bottom: 160px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 54px;
     flex-wrap: wrap;
 }
-.header-flex li {
+.header-menu li{
     font-family: 'Roboto-Thin';
     display: inline-block;
-    padding-right: 40px;
+    padding-right: 25px;
 }
 .header-flex a{
     color: #fff;
@@ -60,9 +66,7 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
 .main{
     font-family: 'Roboto-Thin';
     text-align: center;
-    color: #fff;
-    margin-top: 160px;
-    padding-bottom: 363px;
+    color: #fff; 
 }
 .main-h1{
     font-size: 93.49px;
@@ -136,7 +140,7 @@ section p{
     font-size: 14px;
     font-weight: 100; 
     width: 515px; 
-    padding: 34px 60px 42px 30px;
+    padding: 34px 60px 26px 30px;
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
@@ -180,6 +184,7 @@ section p{
     border-top-right-radius: 15px;
     overflow: hidden;
     color: #fff;
+    
 }
 .movie-list_table__header th{
     font-family: 'Roboto-Bold';
@@ -188,9 +193,9 @@ section p{
     background: #a3cc40;
     padding-top: 19px;
     padding-bottom: 19px;
+    padding-left: 5px;
     text-align: left;
 }
-
 .movie-list_table__body td{
     font-size: 22px;
     padding-top: 19px;
@@ -240,14 +245,21 @@ section p{
 } 
 /***Подарок каждому***/
 .present-background{
-    background-image: url(../img/background_two.png);
+    background-image: url(../img/background_two.jpg);
     background-size: cover;
     width: auto;
     min-height: 700px;
 }
+/***!!!!***/
+.present-background::after{
+    display: block;
+}
 /****Доделай!****/
 .present-img{
     position: absolute;
+    top: 2182px;
+    left: 240px;
+
 }
 .present-block{
     max-width: 1030px;
@@ -309,8 +321,92 @@ section p{
 .movie-grid_flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around ;
+    justify-content: space-around;
+    margin-bottom: 40px;
 }
-.movie-grid_flex-element{
+
+.movie-grid_item{
+    position: relative;
+    overflow: hidden;
+}
+
+/*всплывающее описание*/
+.movie-grid_description {
+    color:white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    bottom: -100%;
+    background: rgba(144, 210, 61,.8);
+    border-radius: 11px;
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: .2s; 
+}
+/*всплывание*/
+.movie-grid_item:hover .movie-grid_description{
+    bottom: 0;
+}
+.movie-name{
+    font-family: 'Roboto-Black';
+    font-size: 36px;
+}
+.movie-line{
+    
+    height: 8px;
+    width: 80px;
+    border: 0;
+    box-shadow: none;
+    background: white;
+    margin: 5px 0 14px;
+}
+.movie-text{
+    font-size: 18px;
+    font-family: 'Roboto-Regular';
+    flex: 1;
+}
+.movie-links{
+    margin-left: 11px;
+}
+.movie-links_svg{
+    fill:white;
+    transition: .2s;
+}
+.movie-links_svg:hover{
+    fill: black;
+}
+/***подвал***/
+.footer-bg{
+    background: #90d23d;
+    height: 220px;
+    max-width: auto;
+}
+.footer-links{
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-links svg{
+    fill: white;
+    transition: .2s;
+}
+.link-color:hover svg{
+    fill: black;
+}
+.footer-text{
+    margin: 26px auto;
+    max-width: 370px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto-Thin';    
+}
+
+
   
-}
