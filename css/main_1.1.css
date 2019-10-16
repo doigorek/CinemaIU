@@ -3,7 +3,7 @@ blockquote, pre, a, abbr, acronym, address,big, cite, code, del, dfn, em, font, 
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
 dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
 tr, th, td, button
-h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b
+h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
 {
     background: transparent;
     border: 0;
@@ -267,7 +267,7 @@ section p{
     overflow: hidden;
     text-align: right;
 }
-.present-block-h3{
+.present-block-h2{
     margin-top: 140px;
     margin-bottom: 50px;
     font-family: 'Roboto-Black';
@@ -299,9 +299,9 @@ section p{
 /***Сетка фильмов***/
 .movie-grid{
     max-width: 1030px;
-    
     margin: auto;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 .movie-grid_header{
     margin-left: 25px;
@@ -377,15 +377,19 @@ section p{
 .movie-links_svg{
     fill:white;
     transition: .2s;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .movie-links_svg:hover{
-    fill: black;
+    box-shadow: none;
 }
 /***подвал***/
 .footer-bg{
     background: #90d23d;
-    height: 220px;
+    height: 670px;
     max-width: auto;
+}
+.footer-map{
+    height: 450px;
 }
 .footer-links{
     padding-top: 60px;
@@ -396,16 +400,18 @@ section p{
 .footer-links svg{
     fill: white;
     transition: .2s;
+    margin: 1px 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .link-color:hover svg{
-    fill: black;
+    box-shadow: none;
 }
-.footer-text{
+#footer-text{
     margin: 26px auto;
     max-width: 370px;
     text-align: center;
     color: white;
-    font-family: 'Roboto-Thin';    
+    font-family: 'Roboto-Thin', sans-serif; 
 }
 
 
