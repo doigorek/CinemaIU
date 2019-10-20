@@ -306,13 +306,13 @@ section p{
 }
 /***Сетка фильмов***/
 .movie-grid{
-    max-width: 1030px;
+    max-width: 970px;
     margin: auto;
     overflow: hidden;
     margin-bottom: 50px;
 }
 .movie-grid_header{
-    margin-left: 25px;
+
     margin-top: 86px; 
 }
 .movie-grid_header h2{
@@ -327,10 +327,12 @@ section p{
     margin-bottom: 79px;  
 }
 .movie-grid_flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 40px;
+    width: 975px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    box-sizing: border-box;
 }
 
 .movie-grid_item{
