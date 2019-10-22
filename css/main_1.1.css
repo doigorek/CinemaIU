@@ -31,31 +31,37 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
     font-family: 'Roboto-Bold';
     src: url(../fonts/Roboto-Bold.ttf) format('truetype');
 }
+html{
+    font-size: 20px;
+    -webkit-text-size-adjust: 100%;
+}
 /***Шапка***/
 .background-top{
-    padding-top: 51px;
-    padding-bottom: 354px;
+    padding-top: 3.125rem;
     background-image: url(../img/background_top.jpg);
     background-size: cover;
-    height:843px;
+    height:42.45rem;
     width: auto; 
+    position: relative;
+    overflow: hidden;
 }
 .header-logo{
-    flex: 1; /* можно ли оставить вместо inline-block, если соответствует требуемым функциям?*/
+    flex: 1; 
 }
 .header-flex{
-    width: 1030px;
+    max-width: 51.375rem;
     margin: auto;
-    margin-bottom: 160px;
+    margin-bottom: 8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 .header-menu li{
+    font-size: 0.8em;
     font-family: 'Roboto-Thin';
     display: inline-block;
-    padding-right: 25px;
+    padding-right: 0.7rem;
 }
 .header-flex a{
     color: #fff;
@@ -69,16 +75,16 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
     color: #fff; 
 }
 .main-h1{
-    font-size: 93.49px;
+    font-size: 4.6745em;
     font-weight: 100;
-    line-height: 0.9;
+    line-height: 0.85;
     -moz-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
     -webkit-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
     -ms-transform: matrix( 0.85646517969581,0,0,0.85570991939625,0,0);
 }
 .main-h2{
     font-family: 'Roboto-Regular';
-    font-size: 58.431px;
+    font-size: 2.92155em;
     line-height: 1.2;
     -moz-transform: matrix( 0.85,0,0,0.85,0,0);
     -webkit-transform: matrix( 0.85,0,0,0.85,0,0);
@@ -86,16 +92,16 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
 }
 /***Почему мы***/
 .why-we{
-    max-width: 1030px;
+    max-width: 51.5rem;
     margin: auto;
     overflow: hidden;
 }
 .why-we-h2{
     font-family: 'Roboto-Black';
-    font-size: 50px;
+    font-size: 2.5em;
     text-align: left;
     font-weight: 500;
-    margin-bottom: 120px; 
+    margin-bottom: 6rem; 
 }
 /**section**/
 .why-we-section{
@@ -109,13 +115,13 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
  } 
 .why-we-section section{
     text-align: center;
-    margin: 0 22px;
+    margin: 0 1.1rem;
 }
 /*картинки*/
 .img-warp{
-    height: 211px;
+    height: 10.55rem;
     position: relative;
-    margin-bottom: 36px;
+    margin-bottom: 1.8rem;
 }  
 .img-warp img{
     position: absolute;
@@ -127,48 +133,48 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
 }
 .section{
     /*margin-left: 37,5px;*/
-    max-width: 290px;
+    max-width: 14.5rem;
     max-height: auto;
 }
 .section h3{
-    font-size: 35px;
+    font-size: 1.75rem;
     font-family: 'Roboto-Black';
     color: rgb(36, 36, 36);
     line-height: 1.2;
     text-align: center;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 section p{
-    font-size: 14px;
+    font-size: 0.7rem;
     font-family: 'Roboto-Thin';
     }
 /**Welcome**/ 
 .welcome{
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 100; 
-    width: 515px; 
-    padding: 34px 60px 26px 30px;
+    width: 25.75rem; 
+    padding: 1.7rem 3rem 1.3rem 1.5rem;
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
-    top: 640px;
-    left: 762px;
+    top: 32.3rem;
+    left: 38.1rem;
     z-index: 145;
 }
 .welcome h3{
     font-family: 'Roboto-Black';
     text-align: left;
-    padding-bottom: 28px; 
-    font-size: 39px;  
+    padding-bottom: 1.4rem; 
+    font-size: 1.95em;  
 }
 .welcome_text-block {
     font-family: 'Roboto-Thin';
-    padding-bottom: 16px;
+    padding-bottom: 0.8rem;
 }
 /**Таблица фильмов**/
 .movie-list{
-    max-width: 1030px;
+    max-width: 51.5rem;
     margin: auto;
     overflow: hidden;
 }
@@ -177,19 +183,19 @@ section p{
 }
 .movie-list_h2{
     font-family: 'Roboto-Black';
-    font-size: 50px;
+    font-size: 2.5em;
     text-align: center;
     font-weight: 500;
-    margin-top: 117px; 
-    margin-bottom: 77px;
+    margin-top: 5rem; 
+    margin-bottom: 3.85rem;
     color: #000000; 
 }
 .movie-list_table{
     font-family:'Roboto-Regular';
-    width: 1030px;
+    width: 51.5rem;
     border-collapse: collapse;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
     overflow: hidden;
     color: #fff;
     
@@ -197,17 +203,17 @@ section p{
 .movie-list_table__header th{
     font-family: 'Roboto-Bold';
     font-weight: 100;
-    font-size: 30px;
+    font-size: 1.5em;
     background: #a3cc40;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 5px;
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+    padding-left: 0.25rem;
     text-align: left;
 }
 .movie-list_table__body td{
-    font-size: 22px;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    font-size: 1.1em;
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
     text-align: left;
 }
 /*первая колонна*/
@@ -216,14 +222,14 @@ section p{
 }
 .movie-list_table__body td:first-of-type{
     text-align: center;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 /*'+'*/
 .movie-list_table__body td:last-of-type{
-    padding-left: 61px;
-    padding-right: 32px;
-    padding-top: 19px;
+    padding-left: 3.05rem;
+    padding-right: 1.6rem;
+    padding-top: 0.95rem;
 }
 .movie-list_table__body tr:nth-child(3n+1){
     background: #373737;
@@ -236,17 +242,17 @@ section p{
 }
 /*закругление последней строки*/
 .last-line tr:last-child td:nth-child(1){
-    border-bottom-left-radius: 15px;
+    border-bottom-left-radius: 0.75rem;
 }
 .last-line tr:last-child td:nth-child(4){
-    border-bottom-right-radius: 15px;
+    border-bottom-right-radius: 0.75rem;
 }
 /*описание таблицы*/
 .movie-list__table__undertable td{
     color: #000000;
-    font-size: 14px;
-    padding-top: 39px;
-    padding-bottom: 146px;
+    font-size: 0.7rem;
+    padding-top: 1.95rem;
+    padding-bottom: 7.3rem;
     text-align: center;
     font-weight: 900;
     font-family: 'Roboto-Thin';
@@ -256,7 +262,7 @@ section p{
     background-image: url(../img/background_two.jpg);
     background-size: cover;
     width: auto;
-    min-height: 700px;
+    min-height: 35rem;
 }
 /***!!!!***/
 .present-background::after{
@@ -265,73 +271,74 @@ section p{
 /****Доделай!****/
 .present-img{
     position: absolute;
-    top: 2182px;
-    left: 240px;
+    top: 108.5rem;
+    left: 10.3rem;
 
 }
 .present-block{
-    max-width: 1030px;
+    max-width: 51.5rem;
     margin: auto;
     overflow: hidden;
     text-align: right;
 }
 .present-block-h2{
-    margin-top: 140px;
-    margin-bottom: 50px;
+    margin-top: 7rem;
+    margin-bottom: 2.5rem;
     font-family: 'Roboto-Black';
-    font-size: 50px;
+    font-size: 2.5em;
     color: #fff;
 }
 .present-block p{
-    font-size: 14px;
+    font-size: 0.7em;
     color: #fff;
-    padding-bottom: 19px;
-    padding-left: 360px;
+    padding-bottom: 0.95rem;
+    padding-left: 18rem;
 } 
 .present-block_button{  
     font-family: 'Roboto-Thin';  
     text-align: center;
     background: #a3cc40;
-    border-radius: 15px;
-    margin-top: 31px;
-    padding: 16px 20px;
-    width: 220px;
+    border-radius: 0.75rem;
+    margin-top: 1.55rem;
+    padding: 0.8rem 1rem;
+    width: 11rem;
     margin-left: auto;
-    margin-right: 3px;
+    margin-right: 0.15rem;
     overflow: hidden;
     }
 .present-block_button a{
     color: #fff;
-    font-size: 20px;
+    font-size: 1em;
 }
 /***Сетка фильмов***/
 .movie-grid{
-    max-width: 970px;
+    min-height: 80vh;
+    max-width: 48.5rem;
     margin: auto;
     overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 2.5rem;
 }
 .movie-grid_header{
 
-    margin-top: 86px; 
+    margin-top: 4.3rem; 
 }
 .movie-grid_header h2{
     font-family: 'Roboto-Black';
-    font-size: 50px;
+    font-size: 2.5em;
     text-align: left;
     font-weight: 500;
     color: #000000;  
 }
 .movie-grid_header p{
-    margin-top: 35px;
-    margin-bottom: 79px;  
+    margin-top: 1.75rem;
+    margin-bottom: 3.95rem;  
 }
 .movie-grid_flex{
-    width: 975px;
+    width: 48.75rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     box-sizing: border-box;
 }
 
@@ -349,11 +356,11 @@ section p{
     height: 100%;
     bottom: -100%;
     background: rgba(144, 210, 61,.8);
-    border-radius: 11px;
-    padding-top: 20px;
-    padding-left: 23px;
-    padding-right: 23px;
-    padding-bottom: 22px;
+    border-radius: 0.55rem;
+    padding-top: 1rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+    padding-bottom: 1.1rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -365,31 +372,31 @@ section p{
 }
 .movie-name{
     font-family: 'Roboto-Black';
-    font-size: 36px;
+    font-size: 1.8rem;
 }
 .movie-line{
     
-    height: 8px;
-    width: 80px;
+    height: 0.4rem;
+    width: 4rem;
     border: 0;
     box-shadow: none;
     background: white;
-    margin: 5px 0 14px;
+    margin: 0.25rem 0 0.7rem;
 }
 .movie-text{
-    font-size: 18px;
+    font-size: 0.9em;
     font-family: 'Roboto-Regular';
     flex: 1;
 }
 .movie-links{
-    margin-left: 11px;
+    margin-left: 0.55rem;
 }
 .movie-links_svg svg{
     fill:white;
     transition: .2s;
     box-sizing: border-box;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 32px;
+    border-radius: 1.6rem;
 }
 .movie-links_svg svg:hover{
     box-shadow: none;
@@ -397,15 +404,15 @@ section p{
 /***подвал***/
 .footer-bg{
     background: #90d23d;
-    height: 670px;
+    height: 33.5rem;
     max-width: auto;
 }
 .footer-map{
-    height: 450px;
+    height: 22.5rem;
     width: auto;
 }
 .footer-links{
-    padding-top: 60px;
+    padding-top: 3rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -416,14 +423,14 @@ section p{
     margin: 1px 5px;
     box-sizing: border-box;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 32px;
+    border-radius: 1.6rem;
 }
 .link-color:hover svg{
     box-shadow: none;
 }
 #footer-text{
-    margin: 26px auto;
-    max-width: 370px;
+    margin: 1.3rem auto;
+    max-width: 18.5rem;
     text-align: center;
     color: white;
     font-family: 'Roboto-Thin', sans-serif; 
