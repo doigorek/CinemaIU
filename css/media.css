@@ -1,4 +1,41 @@
-@media screen and (max-width:1200px)
+@media (max-width:1200px)
 {
-
+    section p{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width:1000px)
+{
+    html{
+        font-size: 15px;
+    }
+    .present-img{
+        display: none;
+    }
+    .welcome{
+        display: ;
+    }
+}
+@media (max-width:800px)
+{
+    .background-top{
+        margin: 0 auto;
+        padding: 0 0.75rem;
+        height: ;
+    }
+    .header-menu{
+        font-size: 1rem;
+    }
+    /*уменьшение ширины и скролл у ячеек таблицы*/
+    .movie-list_table__body td{
+        font-size: 1rem;
+        overflow-y:scroll
+    }
+    /* обратный порядок преимуществ */
+    .why-we-section{
+        flex-direction: row-reverse;
+    }
+    .ucity{
+        display: none;
+    }
 }

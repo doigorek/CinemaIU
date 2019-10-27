@@ -43,6 +43,10 @@
                 </li>
             </ul>
         </div>
+        <div class="ucity">
+            <i>Ваш город:</i>
+            <a>Москва</a>
+        </div>
     </div>
     
     <div class="main">
@@ -126,9 +130,9 @@
                        
                 <tbody class="movie-list_table__body last-line ">
                     <tr>
-                        <td>10:00 </td>
+                        <td>10:00</td>
                         <td><a href="https://www.kinopoisk.ru/film/838/" target="_blank">Человек-паук</a></td>
-                        <td>фантастика, боевик, приключения</td>
+                        <td>фантастика, боевик,приключения</td>
                         <td>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1278,7 +1282,7 @@
     <footer >   
         <div class="footer-bg" >
             <div class="footer-map">
-                <img width="1510px" src="https://via.placeholder.com/1920x450?text=Map-1920x450" alt="map" title="map">
+                <img>
             </div>
             <div class=" footer-links">
                 <a class="link-color" href="http://fb.com" title="facebook" target="_blank">
@@ -1336,100 +1340,5 @@
         </div>  
     </footer>
 
-    <form action="/order.php">
-        <a name="form">
-            <b>Закажите билет!!</b>
-        </a>
-        <br />
-        <div>
-            <label for="cl_name">Ваше имя</label>
-            <!-- Обратите внимание на аттрибуты required, placeholder -->
-            <input id="cl_name" name="client_name" placeholder="Имя*" required aria-required="true" />
-
-            <!-- Попробуйте расскоментировать следующий input. Значение по умолчанию проставляется в value-->
-            <!-- <input placeholder="Имя*" required value="some" /> -->
-
-            <!-- аттрибут value - то значение, которе будет передано на сервер -->
-            <!-- selected - этот аттрибут указывает выбранное значение по умолчанию -->
-        </div>
-
-        <div>
-            <lable for="email">
-                Введите ваш e-mail
-            </lable>
-            <!-- Валидация средствами html5 -->
-            <!-- Подробнее: https://developer.mozilla.org/ru/docs/Learn/HTML/Forms/Валидация_формы -->
-            <input name="email" placeholder="E-mail" type="email" />
-        </div>
-
-        <div>
-            <!-- Если label остутствует, рекомендуется указывать aria-label для обеспечения доступности-->
-            <select name="place" aria-label="Выбрать место">
-                <option value="1">Место 1</option>
-                <option value="2">Место 2</option>
-                <option selected value="3">Место 3</option>
-                <option value="4">Место 4</option>
-                <option value="5">Место 5</option>
-                <option value="6">Место 6</option>
-                <option value="7">Место 7</option>
-                <option value="8">Место 8</option>
-                <option value="9">Место 9</option>
-                <option value="10">Место 10</option>
-            </select>
-        </div>
-
-        <div>
-            <!-- У любого элемента управления должен быть name - он идентифицирует передаваемое значение -->
-            <!-- Т.е. name - это имя передаваемой на сервер переменной -->
-            <!-- Для радиокнопнок это важно, чтобы они работали в "одной группе" -->
-            <div>
-                <!-- с помощью for и id у input задаем подписи к радио-кнопкам. Чтобы при нажатии на label -->
-                <!-- активировался соответствующий radio button -->
-                <!-- value так же указывает передаваемое значение-->
-                <label for="row1">
-                    Ряд 1
-                </label>
-                <input id="row1" type="radio" name="row" value="1" />
-            </div>
-
-            <div>
-                <label for="row2">
-                    Ряд 2
-                </label>
-                <input id="row2" type="radio" name="row" value="2" />
-            </div>
-
-            <div>
-                <label for="row3">
-                    Ряд 3
-                </label>
-                <input id="row3" type="radio" name="row" value="3" />
-            </div>
-        </div>
-
-        <div>
-            <!-- В отличие от других элементов, textarea требует закрывающего тега-->
-            <!-- На сервер передается содержимое закрывающего тега -->
-            <textarea aria-label="Ваш комментарий" name="comment" placeholder="Введите ваш комментарий">
-                <!-- Даже комментарий внутри textarea выводится 
-                    "как есть", учитываются так же переносы строк и      все пробелы
-                именно так и отправятся данные -->
-            </textarea>
-        </div>
-
-        <div>
-            <input id="agreement" name="agree" type="checkbox" required aria-required="true" />
-            <label for="agreement">Согласие на обработку персональных данных</label>
-        </div>
-
-        <div>
-            <label>Промо-купон:</label>
-            <!-- Для отправки файла у самой формы (тег form) должны быть указаны некоторые атрибуты-->
-            <!-- Подсказка в методических материалах -->
-            <input type="file" name="promo" />
-        </div>
-
-        <!-- input с типом submit создает кнопку для отправки той формы, в которой находится input-->
-        <input aria-label="Отправить форму" type="submit" />
-    </form>
+    
 </body>
