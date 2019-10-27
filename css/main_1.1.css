@@ -3,7 +3,7 @@ blockquote, pre, a, abbr, acronym, address,big, cite, code, del, dfn, em, font, 
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
 dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
 tr, th, td, button
-h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
+h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside, nav
 {
     background: transparent;
     border: 0;
@@ -32,7 +32,6 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside
     src: url(../fonts/Roboto-Bold.ttf) format('truetype');
 }
 html{
-    min-width: 320px;
     font-size: 20px;
     -webkit-text-size-adjust: 100%;
 }
@@ -42,7 +41,7 @@ html{
     background-image: url(../img/background_top.jpg);
     background-size: cover;
     min-height:42.45rem;
-    max-width: 100vw; 
+    width: auto;
     position: relative;
     background-repeat: no-repeat;
     z-index: -2;
@@ -60,7 +59,7 @@ html{
     flex: 25%; 
 }
 .header-flex{
-    max-width: 51.375rem;
+    width: 51.5rem;
     margin: 0 auto;
     margin-bottom: 8rem;
     display: flex;
@@ -81,6 +80,8 @@ html{
     color: #90d23d;
 }
 .main{
+    width: 51.5rem;
+    margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Roboto-Thin';
     text-align: center;
@@ -105,8 +106,8 @@ html{
 /***Почему мы***/
 .why-we{
     margin: 0 auto;
-    overflow: hidden;
     width: 51.5rem;
+    position: relative;
 }
 .why-we-h2{
     font-family: 'Roboto-Black';
@@ -171,8 +172,8 @@ section p{
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
-    top: 32.2rem;
-    left: 42.1rem;
+    right: -0.2rem;
+    top: -10.1rem;
     
 }
 .welcome h3{
@@ -189,7 +190,6 @@ section p{
 .movie-list{
     max-width: 51.5rem;
     margin: 0 auto;
-    overflow: hidden;
 }
 .movie-list a{
     color: #fff;
@@ -209,7 +209,6 @@ section p{
     border-collapse: collapse;
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
-    overflow: hidden;
     color: #fff;
     
 }
@@ -266,7 +265,7 @@ section p{
     color: #000000;
     font-size: 0.7rem;
     padding-top: 1.95rem;
-    padding-bottom: 7.3rem;
+    margin-bottom: 0.3rem;
     text-align: center;
     font-weight: 900;
     font-family: 'Roboto-Thin';
@@ -275,7 +274,7 @@ section p{
 .present-background{
     background-image: url(../img/background_two.jpg);
     background-size: cover;
-    width: auto;
+    width:auto;
     min-height: 35rem;
     position: relative;
     z-index: -2;
@@ -290,7 +289,6 @@ section p{
     bottom: -4.6rem;
     left: 0;
     position: absolute;
-    overflow: hidden;
     z-index: -1;
 }
 /****Доделай!****/
@@ -301,9 +299,8 @@ section p{
 
 }
 .present-block{
-    max-width: 51.5rem;
-    margin: auto;
-    overflow: hidden;
+    width: 51.5rem;
+    margin: 0 auto;
     text-align: right;
 }
 .present-block-h2{
@@ -329,7 +326,6 @@ section p{
     width: 11rem;
     margin-left: auto;
     margin-right: 0.15rem;
-    overflow: hidden;
     }
 .present-block_button a{
     color: #fff;
@@ -338,9 +334,8 @@ section p{
 /***Сетка фильмов***/
 .movie-grid{
     min-height: 80vh;
-    max-width: 48.5rem;
+    width: 51.5rem;
     margin: 0 auto;
-    overflow: hidden;
     margin-bottom: 2.5rem;
 }
 .movie-grid_header{
@@ -369,7 +364,6 @@ section p{
 
 .movie-grid_item{
     position: relative;
-    overflow: hidden;
 }
 
 /*всплывающее описание*/
@@ -429,14 +423,17 @@ section p{
 /***подвал***/
 .footer-bg{
     background: #90d23d;
+}
+.footer-container{
+    margin: 0 auto;
     height: 33.5rem;
-    max-width: auto;
+    width: 51.5rem;
 }
 .footer-map{
-    max-height: 22.5rem;
-    max-width:50.5rem;
+    
 }
 .footer-links{
+
     padding-top: 3rem;
     display: flex;
     justify-content: center;

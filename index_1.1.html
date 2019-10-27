@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/formandbutton.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/films.js"></script>
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 </head>
 
 
@@ -236,7 +239,7 @@
             </p>
         </div>
         
-        <div class="movie-grid_flex">
+        <div class="movie-grid_flex owl-carousel">
             <div class="movie-grid_item">
                     <div class="movie-grid_inner" >   
                         <div class="movie-grid_poster">
@@ -582,8 +585,7 @@
                             </div>
                     </div> 
             </div>
-        
-        
+
             <div class="movie-grid_item">
                     <div class="movie-grid_inner" >   
                         <div class="movie-grid_poster">
@@ -1279,8 +1281,8 @@
     </section>
 
 
-    <footer >   
-        <div class="footer-bg" >
+    <footer class="footer-bg" >   
+        <div class="footer-container" >
             <div class="footer-map">
                 <img>
             </div>
@@ -1340,5 +1342,25 @@
         </div>  
     </footer>
 
-    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+       $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    </script>
+
 </body>
