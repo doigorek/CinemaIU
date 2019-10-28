@@ -426,7 +426,7 @@ section p{
 }
 .footer-container{
     margin: 0 auto;
-    height: 33.5rem;
+    height: 11rem;
     width: 51.5rem;
 }
 .footer-map{
@@ -451,6 +451,7 @@ section p{
     box-shadow: none;
 }
 #footer-text{
+    font-size: 1rem;
     margin: 1.3rem auto;
     max-width: 18.5rem;
     text-align: center;
@@ -462,4 +463,18 @@ section p{
     max-width: 50rem;
     margin: auto;
 }
+/****карусель стрелочки*****/
+.owl-nav div:nth-child(3){
+    position: relative;
+  }
+.owl-prev button:first-of-type{
+    position: absolute;
+    top: 5rem;
+    left: -1rem;
+  }
+.owl-next button:last-of-type{
+    position: absolute;
+    top: 5rem;
+    right: -1rem;
+  }
 
