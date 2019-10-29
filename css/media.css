@@ -55,3 +55,17 @@
         padding-bottom: 0.1rem;
     }
 }
+@media (max-width:600px){
+    .background-top{
+        width: 50em;
+    }
+    .background-top::after {
+        border-left: 50em solid transparent;
+    }
+    .present-background{
+        width: 50em;
+    }
+    .footer-bg{
+        width: 50em;
+    }
+}

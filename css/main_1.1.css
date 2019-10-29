@@ -33,7 +33,7 @@ h1, h2, h3,h4, h5, h6, p, div, section, header, a, blockquote, b, aside, nav
 }
 html{
     font-size: 20px;
-    -webkit-text-size-adjust: 100%;
+    
 }
 /***Шапка***/
 .background-top{
