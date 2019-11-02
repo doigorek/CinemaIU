@@ -1,79 +1,61 @@
-films = [
-    film1 = {
-        name: 'Человек паук',
-        start: '12:00',
-        ganar: [0,1],
-        hire: true,
-        new: false,
-    },
-    film2 = {
-        name: 'Собачья жизнь 2',
-        start: '16:00',
-        ganar: [2,3,4],
-        hire: false,
-        new: false,
-        
-    },
-    film3 = {
-        name: 'История игруше 4',
-        start: '15:00',
-        ganar: [2,4,5],
-        hire: true,
-        new: true,
-    },
-    film4 = {
-        name: 'Люди в черном 2',
-        start: '15:00',
-        ganar: [0,1,4],
-        hire: true,
-        new: false,
-    }
-]
-console.log('films')
+const ganar_1 = 'фантастика '
+const ganar_2 = 'боевик '
+const ganar_3 = 'приключения '
+const ganar_4 = 'фэнтези '
+const ganar_5 = 'драмма '
+const ganar_6 = 'комедия '
 
-const ganars = [
-    'Фантастика', //0
-    'Боевик',     //1
-    'Фэнтези',    //2
-    'Драмма',     //3
-    'Комедия',    //4
-    'Мультфильм'  //5
-]
+let start_film_1 = '10:00'
+let start_film_2 = '20:00'
+let start_film_3 = '23:00'
+let start_film_4 = '00:00'
 
-// Для секции выберите фильм и выберите жанр
-let filmsHire = []
-let filmsNew = []
+let name_film_1 = 'Человек паук'
+let name_film_2 = 'Собачья жизнь 2'
+let name_film_3 = 'История игрушек 4'
+let name_film_4 = 'Люди в черном: Интернэшнл'
 
+// console.log('фильм 1', name_film_1)
 
+let ganar_film_1 = ganar_1 + ganar_2 + ganar_3
+let ganar_film_2 = ganar_3 + ganar_4 + ganar_6
+let ganar_film_3 = ganar_1 + ganar_2 + ganar_3
+let ganar_film_4 = ganar_1 + ganar_2 + ganar_3
 
-for (let i = 0; i < films.length; i++) {
-    if (films[i].hire === flase && films[i].new ===true){
-        filmsNew.push(films[i])
-    }
-}
-//console.log('Для секции выберите фильм', filmsHire)
-//console.log('Для секции Новинки слайдер', filmsNew)
+/*1*/
+let element_start_film_1 = document.getElementById('start_film_1')
+let element_name_film_1 = document.getElementById('name_film_1')
+let element_ganar_film_1 = document.getElementById('ganar_film_1')
 
-const film = {
-    getName: function () {
-        console.log(this.name)
-    },
-    getStart: function () {
-        console.log(this.start)
-    },
-    getGanar: function () {
-        const ganarsFilm = this.ganar
-        let arrGanars = []
-        for(let i = 0; i < ganarsFilm.length; i++){
-            arrGanars.push(ganars[ganarsFilm[i]])
-        }
-        let strGanars = arrGanars.join(', ')
-    }
-}
+// console.log('Элемент 1', document.getElementById('name_film_1'))
 
-for (let i = 0; i < filmsHire.length; i++) {
-    let filmHTML = 
-    film.getName.bind(filmsHire[i])()
-    film.getStart.bind(filmsStart[i])()
-    film.getGanar.bind(filmsGanar[i])()
-}
+element_start_film_1.innerHTML = start_film_1
+element_name_film_1.innerHTML = name_film_1
+element_ganar_film_1.innerHTML = ganar_film_1
+
+/*2*/
+let element_start_film_2 = document.getElementById('start_film_2')
+let element_name_film_2 = document.getElementById('name_film_2')
+let element_ganar_film_2 = document.getElementById('ganar_film_2')
+
+element_start_film_2.innerHTML = start_film_2
+element_name_film_2.innerHTML = name_film_2
+element_ganar_film_2.innerHTML = ganar_film_2
+
+/*3*/
+let element_start_film_3 = document.getElementById('start_film_3')
+let element_name_film_3 = document.getElementById('name_film_3')
+let element_ganar_film_3 = document.getElementById('ganar_film_3')
+
+element_start_film_3.innerHTML = start_film_3
+element_name_film_3.innerHTML = name_film_3
+element_ganar_film_3.innerHTML = ganar_film_3
+/*4*/
+let element_start_film_4 = document.getElementById('start_film_4')
+let element_name_film_4 = document.getElementById('name_film_4')
+let element_ganar_film_4 = document.getElementById('ganar_film_4')
+
+element_start_film_4.innerHTML = start_film_4
+element_name_film_4.innerHTML = name_film_4
+element_ganar_film_4.innerHTML = ganar_film_4
+

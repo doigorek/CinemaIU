@@ -7,12 +7,11 @@
     <meta content='true' name='HandheldFriendly'/>
     <meta content="width" name='MobileOptimized'>
     <meta content='yes' name='apple-mobile-web-app-capable'/>
-    <link rel="stylesheet" href="css/main_1.1.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/formandbutton.css">
+    <link rel="stylesheet" href="css/form.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/films.js"></script>
 
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -133,9 +132,9 @@
                        
                 <tbody class="movie-list_table__body last-line ">
                     <tr>
-                        <td>10:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/838/" target="_blank">Человек-паук</a></td>
-                        <td>фантастика, боевик,приключения</td>
+                        <td id="start_film_1" ></td>
+                        <td id="name_film_1" ><a href="https://www.kinopoisk.ru/film/838/" target="_blank"></a></td>
+                        <td id="ganar_film_1" ></td>
                         <td>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -147,9 +146,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>12:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/sobachya-zhizn-2-2019-1122114/" target="_blank">Собачья жизнь 2</a></td>
-                        <td>фэнтези, драма, комедия</td>
+                        <td id="start_film_2"></td>
+                        <td id="name_film_2"><a href="https://www.kinopoisk.ru/film/sobachya-zhizn-2-2019-1122114/" target="_blank"></a></td>
+                        <td id="ganar_film_2"></td>
                         <td>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -161,9 +160,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>14:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/846824/" target="_blank">История игрушек 4</a></td>
-                        <td>мультфильм, фэнтези, комедия</td>
+                        <td id="start_film_3"></td>
+                        <td id="name_film_3"><a href="https://www.kinopoisk.ru/film/846824/" target="_blank"></a></td>
+                        <td id="ganar_film_3"></td>
                         <td> 
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -175,9 +174,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>16:00</td>
-                        <td><a href="https://www.kinopoisk.ru/film/lyudi-v-chernom-interneshnl-2019-693730/" target="_blank">Люди в черном: Интернэшнл</a></td>
-                        <td>фантастика, боевик, комедия</td>
+                        <td id="start_film_4"></td>
+                        <td id="name_film_4"><a href="https://www.kinopoisk.ru/film/lyudi-v-chernom-interneshnl-2019-693730/" target="_blank"></a></td>
+                        <td id="ganar_film_4"></td>
                         <td>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1338,6 +1337,63 @@
             </div>    
         </div>  
     </footer>
+
+    <form class="form">
+        <div>
+                <input id="name_guest" type="text" required name="name_guest" placeholder="Введите ваше имя" > 
+                <select>
+                    <option value="1"> Выбор 1 </option>
+                    <option value="2"> Выбор 2 </option>
+                    <option value="3"> Выбор 3 </option>
+                    <option value="4"> Выбор 4 </option>
+                </select>
+        </div>
+
+        <div>
+            <input required name="client_surname" placeholder="Введите вашу фамилию" > 
+        </div>
+        <!-- <div>
+            <input type="email"/>
+            <input type="password"/>
+        </div>      -->
+        <!-- <div>
+            <label for="first">1</label>
+            <input id="first" type="radio" value="1" name="some">
+            <label for="second">2</label>
+            <input id="second" type="radio" value="2" name="some">
+            <input type="radio" value="3" name="some">
+            <input type="radio" value="4" name="some">
+        </div> -->
+            
+        <!-- <div>
+                <textarea name="" id="" cols="30" rows="10" >
+                        Коментарий
+                </textarea>
+        </div>    -->
+            
+        <!-- <div>
+            <input id="agree" type="checkbox">
+            <label for="agree" >
+                Я согласен на обработку персональных данных
+            </label>
+        </div> -->
+            
+        <div>
+            
+            <button type="button">
+                    Не отправить
+            </button>
+            <button id="sendPresentInfo"  type="button">Отправить</button>  
+            <!-- <button id="sendPresentInfo"  type="submit">Отправить</button>   -->
+        </div>    
+    </form>
+
+
+
+
+
+    <script src="js/films.js"></script>
+    <script src="js/getPresent.js"></script>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
