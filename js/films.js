@@ -1,61 +1,34 @@
-const ganar_1 = 'фантастика '
-const ganar_2 = 'боевик '
-const ganar_3 = 'приключения '
-const ganar_4 = 'фэнтези '
-const ganar_5 = 'драмма '
-const ganar_6 = 'комедия '
+const ganars = ['фантастика ', 'боевик ', 'приключения ', 'фэнтези ', 'драмма ', 'комедия ']
+const films = [
+    ['10:00', 'Человек паук', [0, 2, 5]],
+    ['12:00', 'Собачья жизнь 2', [5]],
+    ['14:00', 'История игрушек 4', [2, 5, 0]],
+    ['16:00', 'Люди в черном: Интернэшнл', [4, 2, 1]]
+]
 
-let start_film_1 = '10:00'
-let start_film_2 = '20:00'
-let start_film_3 = '23:00'
-let start_film_4 = '00:00'
 
-let name_film_1 = 'Человек паук'
-let name_film_2 = 'Собачья жизнь 2'
-let name_film_3 = 'История игрушек 4'
-let name_film_4 = 'Люди в черном: Интернэшнл'
+const filmstTableBody = document.getElementById('films-table-body');
+for (let i = 0; i < films.length; i++) {
+    
+    let ganresIndex = films[i][2][0]
+    let currentFilmsGanars = ganars[ganresIndex]
 
-// console.log('фильм 1', name_film_1)
+    filmstTableBody.innerHTML += `
+        <tr>
+            <td>${films[i][0]}</td>
+            <td><a href="https://www.kinopoisk.ru/film/838/" target="_blank">${films[i][1]}</a></td>
+            
+            <td>${currentFilmsGanars}</td>
 
-let ganar_film_1 = ganar_1 + ganar_2 + ganar_3
-let ganar_film_2 = ganar_3 + ganar_4 + ganar_6
-let ganar_film_3 = ganar_1 + ganar_2 + ganar_3
-let ganar_film_4 = ganar_1 + ganar_2 + ganar_3
-
-/*1*/
-let element_start_film_1 = document.getElementById('start_film_1')
-let element_name_film_1 = document.getElementById('name_film_1')
-let element_ganar_film_1 = document.getElementById('ganar_film_1')
-
-// console.log('Элемент 1', document.getElementById('name_film_1'))
-
-element_start_film_1.innerHTML = start_film_1
-element_name_film_1.innerHTML = name_film_1
-element_ganar_film_1.innerHTML = ganar_film_1
-
-/*2*/
-let element_start_film_2 = document.getElementById('start_film_2')
-let element_name_film_2 = document.getElementById('name_film_2')
-let element_ganar_film_2 = document.getElementById('ganar_film_2')
-
-element_start_film_2.innerHTML = start_film_2
-element_name_film_2.innerHTML = name_film_2
-element_ganar_film_2.innerHTML = ganar_film_2
-
-/*3*/
-let element_start_film_3 = document.getElementById('start_film_3')
-let element_name_film_3 = document.getElementById('name_film_3')
-let element_ganar_film_3 = document.getElementById('ganar_film_3')
-
-element_start_film_3.innerHTML = start_film_3
-element_name_film_3.innerHTML = name_film_3
-element_ganar_film_3.innerHTML = ganar_film_3
-/*4*/
-let element_start_film_4 = document.getElementById('start_film_4')
-let element_name_film_4 = document.getElementById('name_film_4')
-let element_ganar_film_4 = document.getElementById('ganar_film_4')
-
-element_start_film_4.innerHTML = start_film_4
-element_name_film_4.innerHTML = name_film_4
-element_ganar_film_4.innerHTML = ganar_film_4
-
+            <td>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="33px" height="33px">
+                <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                    d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                </svg>
+            </td>
+        </tr>
+    `
+}
