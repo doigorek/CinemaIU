@@ -1,23 +1,23 @@
-const ganars = ['фантастика ', 'боевик ', 'приключения ', 'фэнтези ', 'драмма ', 'комедия ']
+const ganars = ['фантастика ', 'боевик ', 'приключения ', 'фэнтези ', 'драмма ', 'комедия '];
 const films = [
     ['10:00', 'Человек паук', [2, 3, 4] ],
     ['12:00', 'Собачья жизнь 2', [1, 1]],
     ['14:00', 'История игрушек 4', [2, 2, 2, 4]],
     ['16:00', 'Люди в черном: Интернэшнл', [4]]
-]
+];
 
 
 
 const filmstTableBody = document.getElementById('films-table-body');
 for (let i = 0; i < films.length; i++) {
     
-    let ganresIndex
-    let currentFilmsGanars = ''
+    let ganresIndex;
+    let currentFilmsGanars = '';
     for(let j = 0; j < ganars.length; j++)
     {
-        ganresIndex = films[i][2][j]
+        ganresIndex = films[i][2][j];
         if(ganresIndex != undefined){
-            currentFilmsGanars += String(ganars[ganresIndex])
+            currentFilmsGanars += String(ganars[ganresIndex]);
         } 
     }
     
