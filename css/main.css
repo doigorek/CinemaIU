@@ -44,7 +44,7 @@ html{
     width: auto;
     position: relative;
     background-repeat: no-repeat;
-    z-index: -2;
+    z-index: 1;
 }
 .background-top::after {
     content: "";
@@ -67,6 +67,10 @@ html{
     align-items: center;
     white-space: nowrap;
 }
+.ucity{
+    font-family: 'Roboto-Thin';
+    color: white;
+}
 .header-menu li{
     font-size: 0.8em;
     font-family: 'Roboto-Thin';
@@ -75,6 +79,7 @@ html{
 }
 .header-flex a{
     color: #fff;
+    transition: color .2s ease-in-out;
 }
 .header-flex a:hover{
     color: #90d23d;
@@ -174,7 +179,7 @@ section p{
     position: absolute;
     right: -0.2rem;
     top: -10.1rem;
-    
+    z-index: 3;
 }
 .welcome h3{
     font-family: 'Roboto-Black';
@@ -207,10 +212,7 @@ section p{
     font-family:'Roboto-Regular';
     width: 51.5rem;
     border-collapse: collapse;
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
     color: #fff;
-    
 }
 .movie-list_table__header th{
     font-family: 'Roboto-Bold';
@@ -228,10 +230,20 @@ section p{
     padding-top: 0.95rem;
     padding-bottom: 0.95rem;
     text-align: left;
+    overflow-y: auto;
 }
 /*первая колонна*/
 .movie-list_table__header th:first-of-type{
+    width: 25%;
+    border-top-left-radius: 0.75rem;
     text-align: center;
+}
+.movie-list_table__header th:last-of-type{
+    width: 12.5%;
+    border-top-right-radius: 0.75rem;
+}
+.movie-list_table__header th:nth-child(2){
+    width: 36%;
 }
 .movie-list_table__body td:first-of-type{
     text-align: center;
@@ -240,8 +252,8 @@ section p{
 }
 /*'+'*/
 .movie-list_table__body td:last-of-type{
-    padding-left: 3.05rem;
-    padding-right: 1.6rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
     padding-top: 0.95rem;
 }
 .movie-list_table__body tr:nth-child(3n+1){
@@ -272,21 +284,22 @@ section p{
 } 
 /***Подарок каждому***/
 .present-background{
+    margin-top: 7rem;
     background-image: url(../img/background_two.jpg);
     background-size: cover;
     width:auto;
     min-height: 35rem;
     position: relative;
-    z-index: -2;
+    z-index: 1;
 }
 /***!!!!***/
 .present-background::after {
     content: "";
-    height: 8.55rem;
+    height: 3.95rem;
     width: 102%;
     background: #fff;
     transform: rotate(-5deg);
-    bottom: -4.6rem;
+    bottom: -0.6rem;
     left: 0;
     position: absolute;
     z-index: -1;
@@ -295,10 +308,11 @@ section p{
 .present-img{
     position: absolute;
     top: -4.1rem;
-    left: 14.3rem;
+    left: 10.3rem;
 
 }
 .present-block{
+    padding-top: 1px;
     width: 51.5rem;
     margin: 0 auto;
     text-align: right;
@@ -316,21 +330,27 @@ section p{
     padding-bottom: 0.95rem;
     padding-left: 18rem;
 } 
+.container-button{
+    margin-top: 2rem;
+}
 .present-block_button{  
     font-family: 'Roboto-Thin';  
     text-align: center;
     background: #a3cc40;
     border-radius: 0.75rem;
-    margin-top: 1.55rem;
-    padding: 0.8rem 1rem;
-    width: 11rem;
+    padding: 0.8rem 1.7rem;
     margin-left: auto;
     margin-right: 0.15rem;
-    }
-.present-block_button a{
     color: #fff;
-    font-size: 1em;
+    font-size: 0.9em;
+    }
+.present-block_button:hover{
+    background: none;
+    border: #a3cc40;
+    color: #a3cc40;
 }
+
+
 /***Сетка фильмов***/
 .movie-grid{
     min-height: 80vh;
@@ -348,6 +368,7 @@ section p{
     text-align: left;
     font-weight: 500;
     color: #000000;  
+   
 }
 .movie-grid_header p{
     margin-top: 1.75rem;
@@ -429,9 +450,7 @@ section p{
     height: 11rem;
     width: 51.5rem;
 }
-.footer-map{
-    
-}
+
 .footer-links{
 
     padding-top: 3rem;
@@ -478,3 +497,32 @@ section p{
     right: -1rem;
   }
 
+
+
+#modalPresent {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: 0, 0, 0, rgba(35, 31, 32, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+#modalPresent.modal{
+    background-color: white;
+    margin: 0 auto;
+    width: 30rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#closeModalPresent{
+    position: absolute;
+    right: 1rem;
+    font-size: 30px;
+    top: 1rem;
+    cursor: pointer;
+}

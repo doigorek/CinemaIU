@@ -33,6 +33,7 @@
     }
     .ucity{
         display: none;
+        font-family: 'Roboto';
     }
 }
 @media (min-width:1000px)
