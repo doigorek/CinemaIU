@@ -5,7 +5,7 @@ form {
 input, textarea, select {
     font-size: 19px;
     color: #6c6c6c;
-    padding: 15px 11px;
+    padding: 5px 5px;
     border: 1px solid #bebebe;
     border-radius: 5px;
     width: 100%;
@@ -70,4 +70,9 @@ input[type="file"] + label {
 input[type="button"],button {
 border-right: 1px solid transparent;
 border-bottom: 1px solid transparent;
+}
+
+/*окно покупки билетов*/
+.order-form{
+    font-family: 'Roboto-Regular';
 }

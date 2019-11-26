@@ -126,7 +126,9 @@
                             <i class="icon-down"></i>
                         </th>
                         <th> Жанр </th>
+                        <th>Цена</th>
                         <th></th>
+                        
                     </tr> 
                 </thead>
                        
@@ -1459,22 +1461,22 @@
     </footer>
 
     
-
+    <!-- окно всплывающее окно при нажатии на "Получить подарок" -->
     <div id="modalPresent">
         <div class="modal">
             <button id="closeModalPresent">X</button>
-            <form class="form">
-                <div>
-                    <input id="name_guest" type="text" required name="name_guest" placeholder="Введите ваше имя" > 
-                    <select id="select_guest">
-                        <option value="0" disabled> Выберите подарок </option>
-                        <option value="1"> Попкорн </option>
-                        <option value="2"> Напиток </option>
-                        <option value="3"> Игрушка </option>
-                    </select>
-                </div>
+
+            <div>
+                <input id="name_guest" type="text" required name="name_guest" placeholder="Введите ваше имя" > 
+                <select id="select_guest">
+                    <option value="0"> Выберите подарок </option>
+                    <option value="1"> Попкорн </option>
+                    <option value="2"> Напиток </option>
+                    <option value="3"> Игрушка </option>
+                </select>
+            </div>
         
-                <!-- <div>
+            <!-- <div>
                     <input required name="client_surname" placeholder="Введите вашу фамилию" > 
                 </div>
                 <div>
@@ -1489,8 +1491,8 @@
                     <input type="radio" value="3" name="some">
                     <input type="radio" value="4" name="some">
                 </div> -->
-                    
-                <!-- <div>
+                
+            <!-- <div>
                         <textarea name="" id="" cols="30" rows="10" >
                                 Коментарий
                         </textarea>
@@ -1502,18 +1504,70 @@
                         Я согласен на обработку персональных данных
                     </label>
                 </div> -->
-                    
-                <div>
-                    <!-- <button id="sendPresentInfo"  type="button">Отправить</button>   ПОЭТОМУ НЕ ОТПРАВЛЯЛОСЬ--> 
-                    <button id="sendPresentInfo"  type="submit">Отправить</button>  
-                </div>    
-            </form>
+                
+            <div>
+                <!-- <button id="sendPresentInfo"  type="button">Отправить</button>   ПОЭТОМУ НЕ ОТПРАВЛЯЛОСЬ--> 
+                <button id="sendPresentInfo" type="button">Отправить</button>  
+            </div>    
         </div>
     </div>
 
+
+
+    <!-- окно всплывающее окно при выборе фильма -->
+    <div id="orderForm" class="order-form">
+        <div class="modal">
+            <button id="closeOrderForm">X</button> 
+        
+            <div class="modal__form">
+                <div>
+                    <span>Название фильма</span>
+                    <span id="orderFilmName"></span>
+                </div>
+                <div>
+                    <span>Начало сеанса:</span>
+                    <span id="orderFilmStart"></span>
+                </div>
+                <div>
+                    <span>Жанр:</span>
+                    <span id="orderFilmGenre"></span>
+                </div>
+                <div>
+                    <span>Стоимость билета:</span>
+                    <span id="orderFilmPrice"></span>
+                </div>
+                <div>
+                    <span>Количество билетов:</span>
+                    <input type="number" value="1" step="1" id="orderFilmTicket"></input>
+                </div>
+                <div>
+                    <span>Общая стоимость билетов:</span>
+                    <span id="orderFilmTotalPrice"></span>
+                </div>
+                <div>
+                    <span>Номер телефона:</span>
+                    <input type="tel" pattern="3[0-9] {3}-[0-9]{3} " id="orderFilmPhone"></input>
+                </div>
+                <div>
+                    <span>Имя:</span>
+                    <input id="orderClientName" type="text" id="order"></input>
+                </div>
+
+                <div class="input-wrap"> 
+                    <button id="sendOrder" type="button">Забронировать</button>  
+                </div>    
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <script src="js/films.js"></script>
     <script src="js/getPresent.js"></script>
-
+    
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>

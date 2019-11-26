@@ -1,5 +1,5 @@
-films = [
-    film1 = {
+const films = [
+    {
         name: 'Человек паук',
         start: '10:00',
         genre: [0, 1],
@@ -9,9 +9,10 @@ films = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
         fb: "https://fb.com",
         twitter: "https://twitter.com",
-        behance: "https://www.behance.net"
+        behance: "https://www.behance.net",
+        price: 320,
     },
-    film2 = {
+    {
         name: 'Собачья жизнь 2',
         start: '12:00',
         genre: [2, 3, 4],
@@ -21,9 +22,10 @@ films = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
         fb: "https://fb.com",
         twitter: "https://twitter.com",
-        behance: "https://www.behance.net"
+        behance: "https://www.behance.net",
+        price: 380,
     },
-    film3 = {
+    {
         name: 'История игрушек 4',
         start: '15:00',
         genre: [2, 4, 5],
@@ -33,9 +35,10 @@ films = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
         fb: "https://fb.com",
         twitter: "https://twitter.com",
-        behance: "https://www.behance.net"
+        behance: "https://www.behance.net",
+        price: 400,
     },
-    film4 = {
+    {
         name: 'Люди в черном: Интернэшнл',
         start: '19:00',
         genre: [0, 1, 4],
@@ -45,9 +48,10 @@ films = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
         fb: "https://fb.com",
         twitter: "https://twitter.com",
-        behance: "https://www.behance.net"
+        behance: "https://www.behance.net",
+        price: 420,
     },
-    film5 = {
+    {
         name: 'Собачья жизнь 2',
         start: '19:00',
         genre: [0, 1, 4],
@@ -59,7 +63,7 @@ films = [
         twitter: "https://twitter.com",
         behance: "https://www.behance.net"
     },
-    film6 = {
+    {
         name: 'Люди в черном: Интернэшнл',
         start: '19:00',
         genre: [0, 1, 4],
@@ -75,19 +79,19 @@ films = [
 
 //Справочник жанров
 const genre = [
-    'Фантастика ',   //0
-    'Боевик ',       //1
-    'Фэнтези ',      //2
-    'Драма ',        //3
-    'Комедия ',      //4
-    'Мультфильм ',   //5
+    'фантастика ',   //0
+    'боевик ',       //1
+    'фэнтези ',      //2
+    'драма ',        //3
+    'комедия ',      //4
+    'мультфильм ',   //5
 ]
 
 
 // для секции
-let filmsHire = [];
+const filmsHire = [];
 // для секции слайдер
-let filmsNew = [];
+const filmsNew = [];
 
 for(let i=0; i < films.length; i++){
     if(films[i].hire === true){
@@ -124,31 +128,41 @@ const film = {
     },
     getGenre: function () {
         const genreFilm = this.genre;
-        let arrGenre = [];
+        const arrGenre = [];
         for(let i=0; i < genreFilm.length; i++){
             arrGenre.push(genre[genreFilm[i]]);
         }
-        let strGenre = arrGenre.join(', ');
+        const strGenre = arrGenre.join(', ');
         return strGenre;     //return this.strGenre;   
+    },
+    getPrice: function() {
+        return this.price
     }
 }
 
+/********L-22*******/
+let orderForm = document.getElementById('orderForm');
+let closeOrderForm = document.getElementById('closeOrderForm');
+closeOrderForm.onclick = function () {
+    orderForm.style.display = 'none';
+}
 
-
+/**************/
 for(let i = 0; i< filmsHire.length; i++) {
     const filmName = film.getName.bind(filmsHire[i])();
     const filmStart = film.getStart.bind(filmsHire[i])();
     const filmGenre = film.getGenre.bind(filmsHire[i])();
-    let filmsHireHTML = document.getElementById('filmsHire')
+    const filmsHireHTML = document.getElementById('filmsHire');
+    const filmPrice = film.getPrice.bind(filmsHire[i])();
 
-
-    let filmHTML = `<tr>
+    const filmHTML = `<tr>
             <td id="start_film_2">${filmStart}</td>
             <td id="name_film_2">
             <a href="https://www.kinopoisk.ru/film/sobachya-zhizn-2-2019-1122114/" target="_blank">
             ${filmName}
             </a></td>
             <td id="ganar_film_2">${filmGenre}</td>
+            <td>${filmPrice}</td>
             <td>
                 <svg 
                     xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +174,55 @@ for(let i = 0; i< filmsHire.length; i++) {
             </td>
         </tr>`
     let tr = document.createElement("tr");
+    // tr.className = 'strFilmHire'
     tr.innerHTML = filmHTML;
+    
+    tr.onclick = function() {
+        
+        orderForm.style.display = 'block';
+         
+        let orderFilmName = document.getElementById('orderFilmName');
+        let orderFilmStart = document.getElementById('orderFilmStart');
+        let orderFilmGenre = document.getElementById('orderFilmGenre');
+        let orderFilmPrice = document.getElementById('orderFilmPrice');
+
+        orderFilmName.innerHTML = filmName;
+        orderFilmStart.innerHTML = filmStart;
+        orderFilmGenre.innerHTML = filmGenre;
+        orderFilmPrice.innerHTML = filmPrice;
+        
+        let orderFilmTicket = document.getElementById('orderFilmTicket');
+        let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice');
+
+        orderFilmTotalPrice.innerHTML = filmPrice * orderFilmTicket.value ;
+
+        orderFilmTicket.onchange = function () {
+            orderFilmTotalPrice.innerHTML = filmPrice * orderFilmTicket.value;
+        }
+
+    }
+
     filmsHireHTML.appendChild(tr);
+
 }
+
+
+let sendOrder = document.getElementById('sendOrder');
+sendOrder.onclick = function () {
+    let orderClientName = document.getElementById('orderClientName');
+
+    if(orderClientName.value){
+        orderClientName.style.border = '1px solid #bebebe'
+    } else {
+        orderClientName.style.border = '1px solid red'
+    }
+}
+
+
+
+// const listFilms = document.querySelectorAll('.strFilmHire')
+
+// console.log('List films', listFilms)
 
 const movieGrid = document.getElementById('movie-grid');
 const tmpMovieGrid = document.getElementById('template-movie-box');
@@ -184,6 +244,8 @@ for(let i = 0; i< filmsNew.length; i++){
 
     movieGrid.appendChild(tmp);
 }
+
+
 
 
 

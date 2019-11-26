@@ -243,7 +243,7 @@ section p{
     border-top-right-radius: 0.75rem;
 }
 .movie-list_table__header th:nth-child(2){
-    width: 36%;
+    width: 30%;
 }
 .movie-list_table__body td:first-of-type{
     text-align: center;
@@ -269,7 +269,7 @@ section p{
 .last-line tr:last-child td:nth-child(1){
     border-bottom-left-radius: 0.75rem;
 }
-.last-line tr:last-child td:nth-child(4){
+.last-line tr:last-child td:nth-child(5){
     border-bottom-right-radius: 0.75rem;
 }
 /*описание таблицы*/
@@ -346,8 +346,9 @@ section p{
     }
 .present-block_button:hover{
     background: none;
-    border: #a3cc40;
     color: #a3cc40;
+    border: 1px solid #a3cc40;
+    cursor: pointer;
 }
 
 
@@ -477,11 +478,7 @@ section p{
     color: white;
     font-family: 'Roboto-Thin', sans-serif; 
 }
-/* Заполенине данных*/
-.form{
-    max-width: 50rem;
-    margin: auto;
-}
+
 /****карусель стрелочки*****/
 .owl-nav div:nth-child(3){
     position: relative;
@@ -496,10 +493,38 @@ section p{
     top: 5rem;
     right: -1rem;
   }
+/* Заполенине данных*/
 
 
+.modal{
+    padding: 1.5rem;
+    height: 25rem;
+    width: 25rem;
+    background: white;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+.modal button{
+    font-family: 'Roboto-Thin';  
+    text-align: center;
+    background: #a3cc40;
+    border-radius: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    margin-left: auto;
+    margin-right: 0.15rem;
+    color: #fff;
+    font-size: 0.9em;
+}
+.modal button:hover{
+    background: none;
+    border: 1px solid #a3cc40;
+    color: #a3cc40;
+    cursor: pointer;
+}
 
-#modalPresent {
+/****Всплывающее окно при нажати на "Получить подарок"***/
+
+#modalPresent, #orderForm {
     display: none;
     position: fixed;
     width: 100%;
@@ -510,7 +535,6 @@ section p{
     z-index: 1000;
 }
 
-
 #modalPresent.modal{
     background-color: white;
     margin: 0 auto;
@@ -519,10 +543,20 @@ section p{
     position: relative;
 }
 
-#closeModalPresent{
+#closeModalPresent, #closeOrderForm{
     position: absolute;
     right: 1rem;
     font-size: 30px;
     top: 1rem;
     cursor: pointer;
+}
+
+#filmsHire tr:hover td{
+    color: darksalmon;
+    cursor: pointer;
+}
+
+/*окно покупки билетов*/
+.order-form{
+    font-family: 'Roboto-Thin';
 }
