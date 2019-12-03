@@ -87,6 +87,88 @@ const genre = [
     'мультфильм ',   //5
 ]
 
+const countPlace = 20;
+
+//цикл который формирует массив объектов "мест"
+// place1 = {
+//     number: 1, //
+//     price: 100, //если больше в центре то дороже
+//     brone: true, // забранированные места будут генерироваться случайно
+// },
+
+
+const places = [
+    {
+        number: 1,
+        price: 100,
+        brone: true,
+    },
+    {
+        number: 2,
+        price: 100,
+        brone: false,
+    },
+    {
+        number: 3,
+        price: 100,
+        brone: true,
+    },
+    {
+        number: 4,
+        price: 100,
+        brone: false,
+    },
+    {
+        number: 5,
+        price: 100,
+        brone: true,
+    },
+    {
+        number: 6,
+        price: 100,
+        brone: false,
+    },
+    {
+        number: 7,
+        price: 100,
+        brone: true,
+    },
+    {
+        number: 8,
+        price: 100,
+        brone: false,
+    }
+]
+
+
+let placesHTML = document.querySelector('.places'); 
+let hole = document.querySelector('div'); 
+/* вывод мессива мест */
+
+for(place of places) {
+    let placeDiv = document.createElement('div');
+    placeDiv.innerHTML = place.number;
+    placeDiv.classList.add('placeDiv');
+    
+    /* Цвет */
+    if(place.brone) {
+        placeDiv.classList.add('placeBrone');
+    } else {
+        placeDiv.classList.add('placeFree');
+    }
+
+    /* "Место" (Отсебятина, вне цикла не получется вызвать) */
+    placeDiv.onclick = function () {
+        orderClientPlace.value = place.number
+        console.log(place.number)
+    } 
+
+    placesHTML.append(placeDiv);
+    console.log(place);
+}
+
+
+
 
 // для секции
 const filmsHire = [];
@@ -102,7 +184,6 @@ for(let i=0; i < films.length; i++){
         filmsNew.push(films[i])
     }
 }
-
 
 const film = {
     getFb: function() {

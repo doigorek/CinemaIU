@@ -498,8 +498,8 @@ section p{
 
 .modal{
     padding: 1.5rem;
-    height: 25rem;
-    width: 25rem;
+    height: 40rem;
+    width: 40rem;
     background: white;
     margin: 0 auto;
     border-radius: 25px;
@@ -545,8 +545,8 @@ section p{
 
 #closeModalPresent, #closeOrderForm{
     position: absolute;
-    right: 1rem;
-    font-size: 30px;
+    right: 26.5rem;
+    font-size: 20px;
     top: 1rem;
     cursor: pointer;
 }
@@ -556,7 +556,25 @@ section p{
     cursor: pointer;
 }
 
-/*окно покупки билетов*/
-.order-form{
-    font-family: 'Roboto-Thin';
+/*места*/
+.places {
+    display: flex;
+    margin: 30px;
 }
+.placeDiv {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.placeBrone {
+    background-color: #ffa500;
+}
+.placeFree {
+    background-color: #a3cc40;
+}
+

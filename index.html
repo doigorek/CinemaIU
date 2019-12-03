@@ -1517,8 +1517,8 @@
     <!-- окно всплывающее окно при выборе фильма -->
     <div id="orderForm" class="order-form">
         <div class="modal">
+            
             <button id="closeOrderForm">X</button> 
-        
             <div class="modal__form">
                 <div>
                     <span>Название фильма</span>
@@ -1552,10 +1552,17 @@
                     <span>Имя:</span>
                     <input id="orderClientName" type="text" id="order"></input>
                 </div>
+                <div>
+                    <span>Выбранное место:</span>
+                    <input id="orderClientPlace" type="text"></input>
+                </div>
 
                 <div class="input-wrap"> 
                     <button id="sendOrder" type="button">Забронировать</button>  
                 </div>    
+            </div>
+
+            <div class="places">
             </div>
 
         </div>
