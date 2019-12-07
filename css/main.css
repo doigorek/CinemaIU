@@ -569,12 +569,12 @@ section p{
     font-weight: bold;
     margin-right: 5px;
     text-align: center;
+    background-color: #a3cc40;
 }
-
+.placeDiv:hover {
+    background-color: #4b4d4f;
+}
 .placeBrone {
     background-color: #ffa500;
-}
-.placeFree {
-    background-color: #a3cc40;
 }
 
