@@ -134,7 +134,7 @@ let main = function() {
         placeDiv.onclick = function () {
             if(place.brone){
                 /* Взовращаем значение "Выбранное место" */
-                let placeBrone = orderClientPlace.value
+                let placeBrone = orderClientPlace.value;
                 orderClientPlace.value = 'Место занято';
                 setTimeout(() => {
                     orderClientPlace.value = placeBrone;
@@ -288,23 +288,74 @@ let main = function() {
     const movieGrid = document.getElementById('movie-grid');
     const tmpMovieGrid = document.getElementById('template-movie-box');
     
-    for(let i = 0; i< filmsNew.length; i++){
-        const filmBehance = film.getBehance.bind(filmsNew[i])();
-        const filmTwitter = film.getTwitter.bind(filmsNew[i])();
-        const filmFb = film.getFb.bind(filmsNew[i])();
-        const filmDescription = film.getDescription.bind(filmsNew[i])();
-        const filmName = film.getName.bind(filmsNew[i])();
-        const filmCover = film.getImg.bind(filmsNew[i])();
-        const tmp = tmpMovieGrid.content.cloneNode(true);
-        tmp.getElementById('tmp-img').src = filmCover;
-        tmp.getElementById('tmp-name').innerText = filmName;
-        tmp.getElementById('tmp-description').innerText = filmDescription;
-        tmp.getElementById('fb').href = filmFb;
-        tmp.getElementById('tw').href = filmTwitter;
-        tmp.getElementById('bh').href = filmBehance;
-    
-        movieGrid.appendChild(tmp);
+
+    const request = new XMLHttpRequest(); //XHR
+    const url = 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2019-10-01&primary_release_date.lte=2019-11-01&api_key=e2c01b015b375681951ef2536440f652';
+    request.open('GET', url, true);
+
+    request.onload = function () {
+        if (this.status >= 200 && this.status < 400) {
+            // Success!
+
+            const data = JSON.parse(this.response);
+
+            const mapedFilm = data.results.map(function(film){
+                return {
+                    image: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + film.poster_path,
+                    name: film.title
+                }
+            });
+            renderFilms (mapedFilm);
+        }
+    };
+
+    request.onerror = function () {
+        // console.log('Ошибка соединения')
+        // There was a connection error of some sort
+    };
+
+    request.send();
+
+    function renderFilms(mapedFilm) {
+
+        for(let i = 0; i< mapedFilm.length; i++){
+
+            const filmBehance = film.getBehance.bind(mapedFilm[i])();
+            const filmTwitter = film.getTwitter.bind(mapedFilm[i])();
+            const filmFb = film.getFb.bind(mapedFilm[i])();
+            const filmDescription = film.getDescription.bind(mapedFilm[i])();
+            const filmName = film.getName.bind(mapedFilm[i])();
+            const filmCover = film.getImg.bind(mapedFilm[i])();
+            const tmp = tmpMovieGrid.content.cloneNode(true);
+            tmp.getElementById('tmp-img').src = filmCover;
+            tmp.getElementById('tmp-name').innerText = filmName;
+            tmp.getElementById('tmp-description').innerText = filmDescription;
+            tmp.getElementById('fb').href = filmFb;
+            tmp.getElementById('tw').href = filmTwitter;
+            tmp.getElementById('bh').href = filmBehance;
+        
+            movieGrid.appendChild(tmp);
+        }
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
     }
+
+
 }
 $(document).ready(main);
 
