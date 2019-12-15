@@ -302,7 +302,8 @@ let main = function() {
             const mapedFilm = data.results.map(function(film){
                 return {
                     image: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + film.poster_path,
-                    name: film.title
+                    name: film.title,
+                    description: film.overview
                 }
             });
             renderFilms (mapedFilm);
